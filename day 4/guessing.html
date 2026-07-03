@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Guess The Number Game</title>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Arial, sans-serif;
+      }
+
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        background: url("https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=1600")
+          no-repeat center center/cover;
+      }
+
+      .game-container {
+        width: 400px;
+        background: rgba(255, 255, 255, 0.95);
+        padding: 30px;
+        border-radius: 20px;
+        text-align: center;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+      }
+
+      h1 {
+        color: #333;
+        margin-bottom: 10px;
+      }
+
+      .subtitle {
+        color: #666;
+        margin-bottom: 20px;
+      }
+
+      input {
+        width: 100%;
+        padding: 12px;
+        font-size: 18px;
+        border: 2px solid #ddd;
+        border-radius: 10px;
+        margin-bottom: 15px;
+      }
+
+      button {
+        padding: 12px 20px;
+        margin: 5px;
+        border: none;
+        border-radius: 10px;
+        font-size: 16px;
+        cursor: pointer;
+        transition: 0.3s;
+      }
+
+      .guess-btn {
+        background: #3498db;
+        color: white;
+      }
+
+      .guess-btn:hover {
+        background: #2980b9;
+      }
+
+      .reset-btn {
+        background: #e74c3c;
+        color: white;
+      }
+
+      .reset-btn:hover {
+        background: #c0392b;
+      }
+
+      #message {
+        margin-top: 15px;
+        font-size: 20px;
+        font-weight: bold;
+      }
+
+      .stats {
+        margin-top: 20px;
+        display: flex;
+        justify-content: space-around;
+      }
+
+      .card {
+        background: #f4f4f4;
+        padding: 10px;
+        border-radius: 10px;
+        width: 120px;
+      }
+
+      .win {
+        animation: celebrate 1s infinite;
+      }
+
+      @keyframes celebrate {
+        0% {
+          transform: scale(1);
+        }
+        50% {
+          transform: scale(1.1);
+        }
+        100% {
+          transform: scale(1);
+        }
+      }
+
+      @media (max-width: 500px) {
+        .game-container {
+          width: 90%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="game-container">
+      <h1>🎯 Guess The Number</h1>
+      <p class="subtitle">Guess a number between 1 and 100</p>
+
+      <input type="number" id="guessInput" placeholder="Enter your guess" />
+
+      <button class="guess-btn" onclick="checkGuess()">Guess</button>
+      <button class="reset-btn" onclick="newGame()">New Game</button>
+
+      <div id="message"></div>
+
+      <div class="stats">
+        <div class="card">
+          <h3>Attempts</h3>
+          <p id="attempts">0</p>
+        </div>
+
+        <div class="card">
+          <h3>Score</h3>
+          <p id="score">100</p>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      let randomNumber = Math.floor(Math.random() * 100) + 1;
+      let attempts = 0;
+      let score = 100;
+
+      function checkGuess() {
+        let guess = Number(document.getElementById("guessInput").value);
+        let message = document.getElementById("message");
+
+        if (!guess) {
+          message.innerHTML = "⚠ Please enter a number!";
+          message.style.color = "orange";
+          return;
+        }
+
+        attempts++;
+        document.getElementById("attempts").innerHTML = attempts;
+
+        if (guess === randomNumber) {
+          message.innerHTML = "🎉 Congratulations! You guessed it!";
+          message.style.color = "green";
+          message.classList.add("win");
+        } else if (guess < randomNumber) {
+          message.innerHTML = "📉 Too Low! Try Again.";
+          message.style.color = "red";
+          score -= 5;
+        } else {
+          message.innerHTML = "📈 Too High! Try Again.";
+          message.style.color = "red";
+          score -= 5;
+        }
+
+        if (score < 0) {
+          score = 0;
+        }
+
+        document.getElementById("score").innerHTML = score;
+      }
+
+      function newGame() {
+        randomNumber = Math.floor(Math.random() * 100) + 1;
+        attempts = 0;
+        score = 100;
+
+        document.getElementById("guessInput").value = "";
+        document.getElementById("attempts").innerHTML = "0";
+        document.getElementById("score").innerHTML = "100";
+
+        let message = document.getElementById("message");
+        message.innerHTML = "";
+        message.classList.remove("win");
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Student Login</title>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      body {
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: linear-gradient(135deg, #4facfe, #00f2fe);
+      }
+
+      .login-box {
+        width: 370px;
+        background: rgba(255, 255, 255, 0.15);
+        backdrop-filter: blur(15px);
+        padding: 35px;
+        border-radius: 20px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        text-align: center;
+      }
+
+      .login-box h1 {
+        color: white;
+        margin-bottom: 10px;
+      }
+
+      .login-box p {
+        color: #f1f1f1;
+        margin-bottom: 25px;
+      }
+
+      .input-box {
+        margin: 18px 0;
+      }
+
+      .input-box input {
+        width: 100%;
+        padding: 13px;
+        border: none;
+        outline: none;
+        border-radius: 10px;
+        font-size: 16px;
+      }
+
+      button {
+        width: 100%;
+        padding: 13px;
+        background: #fff;
+        color: #2196f3;
+        border: none;
+        border-radius: 10px;
+        font-size: 17px;
+        font-weight: bold;
+        cursor: pointer;
+        transition: 0.3s;
+      }
+
+      button:hover {
+        background: #2196f3;
+        color: white;
+      }
+
+      .extra {
+        margin-top: 20px;
+        color: white;
+      }
+
+      .extra a {
+        color: yellow;
+        text-decoration: none;
+      }
+
+      .extra a:hover {
+        text-decoration: underline;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="login-box">
+      <h1>🎓 Student Login</h1>
+      <p>Welcome Back!</p>
+
+      <form>
+        <div class="input-box">
+          <input type="text" placeholder="Student ID" required />
+        </div>
+
+        <div class="input-box">
+          <input type="password" placeholder="Password" required />
+        </div>
+
+        <button type="submit">Login</button>
+      </form>
+
+      <div class="extra">
+        <p>Forgot Password? <a href="#">Click Here</a></p>
+        <p>New Student? <a href="#">Register</a></p>
+      </div>
+    </div>
+  </body>
+</html>
