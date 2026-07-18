@@ -1,24 +1,19 @@
 {
-  "name": "employeemanagement2",
-  "private": true,
-  "version": "0.0.0",
-  "type": "module",
+  "name": "employee-management-root",
+  "version": "1.0.0",
+  "description": "Employee Management System - Express API Server",
+  "main": "server.cjs",
   "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "lint": "oxlint",
-    "preview": "vite preview"
+    "start": "node server.cjs",
+    "dev": "nodemon server.cjs"
   },
   "dependencies": {
-    "lucide-react": "^1.24.0",
-    "react": "^19.2.7",
-    "react-dom": "^19.2.7"
+    "cors": "^2.8.6",
+    "dotenv": "^17.4.2",
+    "express": "^4.22.2",
+    "mongoose": "^9.7.4"
   },
   "devDependencies": {
-    "@types/react": "^19.2.17",
-    "@types/react-dom": "^19.2.3",
-    "@vitejs/plugin-react": "^6.0.3",
-    "oxlint": "^1.71.0",
-    "vite": "^8.1.1"
+    "nodemon": "^3.1.14"
   }
 }

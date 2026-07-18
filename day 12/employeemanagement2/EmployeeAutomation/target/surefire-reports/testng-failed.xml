@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite thread-count="1" name="Failed suite [EmpowerHR – Employee Management Automation Suite]" guice-stage="DEVELOPMENT" verbose="0">
+  <test thread-count="1" name="Full Regression Suite(failed)" verbose="0">
+    <classes>
+      <class name="com.employee.TestNG_Report_">
+        <methods>
+          <include name="tc25_EmptyFormValidation"/>
+          <include name="tc16_AddNewEmployee"/>
+          <include name="tc27_SidebarCollapseExpand"/>
+          <include name="tc05_ValidAdminLogin"/>
+          <include name="tc17_SearchEmployee"/>
+          <include name="tc22_SecondEmployeeLogin"/>
+          <include name="flushReport"/>
+          <include name="tc07_ValidEmployeeLogin"/>
+          <include name="tc18_EmployeePortalDashboard"/>
+          <include name="tc08_AdminLogout"/>
+          <include name="initReport"/>
+          <include name="tc29_LeaveListHasEntries"/>
+          <include name="tc19_EmployeePortalNotifications"/>
+          <include name="tc01_PageTitleVerification"/>
+          <include name="tc30_NoJavaScriptErrors"/>
+          <include name="tc11_NavigateToAttendancePage"/>
+          <include name="tc02_LoginPageUIElements"/>
+          <include name="tc10_NavigateToEmployeesPage"/>
+          <include name="tc06_InvalidAdminLogin"/>
+          <include name="tc13_NavigateToLeavesPage"/>
+          <include name="tc15_NotificationsPage"/>
+          <include name="tc14_NavigateToReportsPage"/>
+          <include name="tc12_NavigateToSalaryPage"/>
+          <include name="tc20_EmployeePortalLeaveRequest"/>
+          <include name="tc21_HRAdminLogin"/>
+          <include name="tc24_PasswordToggle"/>
+          <include name="tc04_EmployeeRoleCardClickable"/>
+          <include name="launchBrowser"/>
+          <include name="tc23_BackButtonRoleSelection"/>
+          <include name="tc03_AdminRoleCardClickable"/>
+          <include name="tc28_EmployeeListHasRows"/>
+          <include name="tearDown"/>
+          <include name="tc26_DashboardStatCards"/>
+          <include name="tc09_DashboardLoads"/>
+        </methods>
+      </class> <!-- com.employee.TestNG_Report_ -->
+    </classes>
+  </test> <!-- Full Regression Suite(failed) -->
+</suite> <!-- Failed suite [EmpowerHR – Employee Management Automation Suite] -->

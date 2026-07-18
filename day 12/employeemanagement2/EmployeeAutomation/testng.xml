@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+
+<suite name="EmpowerHR – Employee Management Automation Suite"
+       verbose="2"
+       thread-count="1"
+       parallel="none">
+
+    <test name="Full Regression Suite">
+        <classes>
+            <class name="com.employee.TestNG_Report_"/>
+        </classes>
+    </test>
+
+</suite>
