@@ -1,4 +1,4 @@
 $(document).ready(function() {
-CucumberHTML.timelineItems.pushArray([{"id":"a5d9088f-0cfa-4950-8ad7-bb4319039e54","feature":"Employee Management Login Page","scenario":"Run 2 - Employee logs into the Employee Portal","start":1784368888860,"group":1,"content":"","tags":"","end":1784368913176,"className":"passed"},{"id":"00c0a5a4-0822-4d32-b0eb-916513e40240","feature":"Employee Management Login Page","scenario":"Run 1 - Admin logs into the Admin Portal","start":1784368866301,"group":1,"content":"","tags":"","end":1784368888852,"className":"passed"}]);
+CucumberHTML.timelineItems.pushArray([{"id":"c91f0bb4-e831-49d2-8bb4-3d3929d8ead6","feature":"Employee Management Login Page","scenario":"Run 2 - Employee logs into the Employee Portal","start":1784372216040,"group":1,"content":"","tags":"","end":1784372234541,"className":"failed"},{"id":"cb5ca5ab-eb25-4816-aefb-172501140e16","feature":"Employee Management Login Page","scenario":"Run 1 - Admin logs into the Admin Portal","start":1784372199799,"group":1,"content":"","tags":"","end":1784372216024,"className":"failed"}]);
 CucumberHTML.timelineGroups.pushArray([{"id":1,"content":"Thread[#1,main,5,main]"}]);
 });
