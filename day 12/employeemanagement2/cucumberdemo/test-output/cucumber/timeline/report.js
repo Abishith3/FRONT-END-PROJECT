@@ -1,0 +1,4 @@
+$(document).ready(function() {
+CucumberHTML.timelineItems.pushArray([{"id":"1841390a-9c10-4388-bd8f-66cc9d4a47b1","feature":"Employee Management Login Page","scenario":"Run 2 - Employee logs into the Employee Portal","start":1784364189461,"group":1,"content":"","tags":"","end":1784364211931,"className":"passed"},{"id":"a7361b3d-8978-4665-95c3-6efc5aee0ea6","feature":"Employee Management Login Page","scenario":"Run 1 - Admin logs into the Admin Portal","start":1784364166149,"group":1,"content":"","tags":"","end":1784364189457,"className":"passed"}]);
+CucumberHTML.timelineGroups.pushArray([{"id":1,"content":"Thread[#1,main,5,main]"}]);
+});
